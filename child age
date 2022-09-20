@@ -1,0 +1,35 @@
+package org.learn;
+
+public class Learn {
+    private int age;
+
+    public Learn(int age){
+
+    }
+
+    public int getAge() {
+       return this.age = age;
+    }
+
+    public void setAge ( int age){
+        this.age = age;
+
+    }
+    public Learn() {
+    }
+
+    public static void main(String[] ar) {
+
+        Learn learn = new Learn(16);
+
+        if((learn.getAge() >=13) ||(learn.getAge()<=19))
+            System.out.println("ITs TEEN");
+        else if (learn.getAge() < 13)
+         System.out.println("ITs TEEN");
+        else
+            System.out.println("adult");
+
+
+    }
+
+}
