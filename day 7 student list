@@ -1,7 +1,9 @@
 package org.learn.first;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Collections;
 
 public class Student {
     private String firstName;
@@ -65,6 +67,10 @@ public class Student {
         stdList.add(std1);
         stdList.add(std2);
         stdList.add(std3);
+
+        Comparator.comparing(Student::getLastName);
+        Collections.sort(stdList,(o1,o2) -> o1.getLastName().compareTo(o2.getLastName()));
+        stdList.forEach(System.out::println);
 
      //   stdList.parallelStream().sorted().sorted(Student s-> s.l)
 
