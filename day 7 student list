@@ -1,0 +1,76 @@
+package org.learn.first;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Student {
+    private String firstName;
+    private String lastName;
+    private int gpa;
+    private List studentList;
+
+
+
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", gpa=" + gpa +
+                '}';
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(int gpa) {
+        this.gpa = gpa;
+    }
+
+    public static void main(String[] ar){
+        Student std1 = new Student();
+        std1.setFirstName("Rekha");
+        std1.setLastName("Pandi");
+        std1.setGpa(80);
+
+        Student std2 = new Student();
+        std2.setFirstName("kalee");
+        std2.setLastName("muthu");
+        std2.setGpa(70);
+
+        Student std3 = new Student();
+        std3.setFirstName("geetha");
+        std3.setLastName("suresh");
+        std3.setGpa(95);
+
+        List<Student> stdList = new ArrayList<Student>();
+        stdList.add(std1);
+        stdList.add(std2);
+        stdList.add(std3);
+
+     //   stdList.parallelStream().sorted().sorted(Student s-> s.l)
+
+
+
+    }
+
+
+}
